@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+        p {
+            margin-bottom: 8px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .contact-info {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<p>{last.first_name} {last.last_name} обновил(а) своё резюме.</p>
+<div class="contact-info">
+    <p><strong>Контактные данные:</strong></p>
+    <p>Email: {new.email}</p>
+    <p>Телефон: {new.phone}</p>
+</div>
+
+</body>
+</html>

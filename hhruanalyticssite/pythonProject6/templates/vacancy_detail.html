@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <position>Детали вакансии</position>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Стили для выделения информации об опыте работы */
+        .experience-info {
+            background-color: #f8d7da; /* Красный цвет */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ vacancy.position }}</h1>
+        <p><strong>Местоположение:</strong> {{ vacancy.area }}</p>
+        <p><strong>Целевая зарплата:</strong> {{ vacancy.amount}} {{vacancy.currency}}</p>
+        <!-- Add placeholders for all other fields -->
+        <p><strong>Возраст:</strong> {{ vacancy.age }}</p>
+        <p><strong>Диплом:</strong> {{ vacancy.certificate }}</p>
+        <p><strong>Образование:</strong> {{ vacancy.level }}</p>
+        <p><strong>Position:</strong> {{ vacancy.position }}</p>
+        <p><strong>First Name:</strong> {{ vacancy.first_name }}</p>
+        <p><strong>Gender:</strong> {{ vacancy.gender }}</p>
+        <p><strong>Last Name:</strong> {{ vacancy.last_name }}</p>
+        <p><strong>Middle Name:</strong> {{ vacancy.middle_name }}</p>
+        <p class="experience-info"><strong>Опыт работы:</strong> {{ vacancy.total_experience }} years</p>
+        <p><strong>Primary Name:</strong> {{ vacancy.primary_name }}</p>
+        <p><strong>Primary Organization:</strong> {{ vacancy.primary_organization }}</p>
+        <p><strong>Primary Result:</strong> {{ vacancy.primary_result }}</p>
+        <p><strong>Primary Year:</strong> {{ vacancy.primary_year }}</p>
+        <p><strong>Company:</strong> {{ vacancy.company }}</p>
+        <p><strong>Start:</strong> {{ vacancy.start }}</p>
+        <p><strong>End:</strong> {{ vacancy.end }}</p>
+        <p><strong>Industry:</strong> {{ vacancy.industry }}</p>
+        <p><strong>Телефон:</strong> {{ vacancy.phone }}</p>
+        <p><strong>Почта:</strong> {{ vacancy.email }}</p>
+        <p><strong>Resume:</strong> {{ vacancy.resume }}</p>
+        <p><strong>Резюме создано:</strong> {{ vacancy.created_at }}</p>
+        <p><strong>Резюме обновлено:</strong> {{ vacancy.updated_at }}</p>
+
+        <a href="/">Вернуться к списку вакансий</a>
+    </div>
+</body>
+</html>
